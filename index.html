@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Metro</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav>
+        <div class="Logo">
+            <img id="logoImg" src="./Images/delhi metro logo.png" alt="Logo">
+            <h1>Delhi Metro</h1>
+        </div>
+        <div class="Links">
+            <div class="HamburgerMenu">
+                <span class="ham"></span>
+                <span class="ham"></span>
+                <span class="ham"></span>
+            </div>
+            <div class="UList"> 
+            <ul  >
+                <li class="listItems"> <a  class="links" href="#">Home</a>  </li>
+                <li class="listItems"> <a class="links" href="#">About us</a>  </li>
+                <li class="listItems"> <a class="links" href="#">Contact Us</a>  </li>
+                 
+            </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="slider">
+        <div class="imagesContainer">
+            <div id="FirstImg" class="slide">
+                <img src="./Images/pexels-rohit-gangwar-904272.jpg">
+            </div>
+            <div id="SecondImg" class="slideHidden"><img src="./Images/naman-mehra-48qvDy3lDNI-unsplash.jpg" alt=""></div>
+            <div id="ThirdImg" class="slideHidden"><img src="./Images/Delhi-Metro.jpg" alt=""></div>
+             
+        </div>
+        <!-- Right Arrow -->
+       <img class="buttons" id="right" src="./Images/right.png" alt="rightArrow">
+       <!-- Left Arrow -->
+       <img class="buttons" id="left" src="./Images/left.png" alt="Left Arrow">
+       <!-- Image Text -->
+       <h1 class="ImageText">"Travelling just got easier with Delhi Metro"</h1>
+       <!-- Square Divs -->
+        <div class="SquareButtons">
+            <div class="SquareContainer"> 
+            <div data-name="FirstImg" class="Square"></div>
+            <div data-name="SecondImg" class="Square"></div>
+            <div data-name="ThirdImg" class="Square"></div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="stockVideo">
+        <video  controls autoplay loop>
+            <source src="./Images/Pexels Videos 2817.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="videoText">
+            <h1>Delhi Metro</h1>
+            <p>The Delhi Metro is a mass rapid transit (MRT) system serving Delhi and its satellite cities of Ghaziabad, Faridabad,
+            Gurgaon, Noida, Bahadurgarh and Ballabhgarh, in the National Capital Region of India. It is by far the largest and
+            busiest metro rail system in India</p>
+        </div>
+         
+    </div>
+
+    <div class="Map">
+        <div class="MapDiv"> 
+        <h1>Map of Delhi Metro</h1>
+        </div>
+        <img class="MapPic" src="./Images/Map.jpg" alt="Delhi metro map">
+    </div>
+
+    <div class="Footer">
+        <h1>Contact Us</h1>
+        <div class="contactItems"><a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+        </div>
+         </div>
+    
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>

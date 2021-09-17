@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+:root {
+  --fontImp: "Montserrat";
+  --navText: white;
+  --fontIBM: "IBM Plex Sans";
+}
+
+nav {
+  width: 100%;
+  padding: 0.8em 1em;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  color: var(--navText);
+  z-index: 2;
+}
+
+nav.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ham.black {
+  background-color: black;
+}
+
+.HamburgerMenu span {
+  display: block;
+  margin: 2px 0px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  border-radius: 9px;
+}
+
+.UList {
+  position: absolute;
+  transform: scale(0, 0);
+
+  transform-origin: initial;
+  width: 50%;
+  top: 5em;
+  left: 25%;
+  right: 25%;
+  text-align: center;
+  padding: 1em;
+  background-color: white;
+  opacity: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.UList.open {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.UList ul li {
+  list-style-type: none;
+  font-family: var(--fontImp);
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  margin: 0.4em 0;
+}
+
+.UList ul li a {
+  color: Black;
+  text-decoration: none;
+  position: relative;
+}
+
+.UList ul li a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: black;
+  transition: transform 250ms ease;
+}
+.UList ul li a:hover::before {
+  content: "";
+  transform: scaleX(1);
+}
+
+.links.black {
+  color: black;
+}
+
+.Logo h1 {
+  font-size: clamp(1.5rem, 2.8vw, 3rem);
+  font-family: var(--fontImp);
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 0em 0.5em;
+}
+
+#logoImg {
+  width: 32px;
+}
+.slider {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+.imagesContainer::after {
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+
+.imagesContainer {
+  width: 100%;
+}
+.imagesContainer img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+.slideHidden {
+  display: none;
+  animation: invisible 400ms ease 0s forwards;
+}
+
+#left,
+#right {
+  display: none;
+}
+
+.ImageText {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  font-family: var(--fontIBM);
+  width: 90%;
+  top: 40%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: clamp(2rem, 2.8vw, 6rem);
+}
+.slide {
+  animation: visible 400ms ease 0s forwards;
+}
+.stockVideo {
+  width: 100%;
+}
+
+.stockVideo h1 {
+  font-family: var(--fontImp);
+  margin: 0.8em 0;
+}
+.stockVideo p {
+  font-family: var(--fontImp);
+  line-height: 170%;
+}
+
+video {
+  width: 100%;
+}
+.videoText {
+  margin: 0.5em 1.5em;
+}
+.videoText h1 {
+  text-align: center;
+}
+
+.Map {
+  margin-top: 2em;
+}
+.Map img {
+  margin-top: 2em;
+  width: 100%;
+}
+.MapDiv {
+  text-align: center;
+  font-family: var(--fontImp);
+  font-size: clamp(1rem, 2.3vw, 3rem);
+}
+.MapDiv h1 {
+  text-align: center;
+}
+.Footer {
+  padding: 4em 0em;
+  text-align: center;
+  background-color: rgb(18, 18, 51);
+  color: white;
+  font-family: var(--fontImp);
+}
+.contactItems {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+}
+.Footer h1 {
+  font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+}
+.contactItems a {
+  color: white;
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  nav {
+    padding: 0.8em 2em;
+  }
+
+  .HamburgerMenu {
+    display: none;
+  }
+  .UList {
+    position: initial;
+    transform: scale(1);
+    width: 100%;
+    padding: 0;
+    opacity: 1;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .UList ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .UList ul li {
+    margin: 0 0;
+  }
+  .UList ul li a {
+    color: white;
+  }
+  .UList ul li a::before {
+    background-color: white;
+  }
+
+  #left,
+  #right {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    cursor: pointer;
+  }
+  #left {
+    left: 3%;
+  }
+  #right {
+    right: 3%;
+  }
+
+  @keyframes invisible {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes visible {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .ImageText {
+    top: 50%;
+  }
+  .SquareButtons {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+  }
+  .SquareContainer {
+    display: flex;
+    gap: 2em;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .Square {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 2;
+  }
+  video {
+    width: 50%;
+  }
+  .videoText h1 {
+    text-align: left;
+  }
+  .stockVideo {
+    display: flex;
+
+    align-items: center;
+  }
+  .Map {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-top: 0em;
+  }
+  .Map img {
+    width: 50%;
+    margin-top: 0em;
+  }
+  .MapDiv {
+    width: 50%;
+    text-align: center;
+    font-family: var(--fontImp);
+  }
+  .contactItems {
+    flex-direction: row;
+  }
+}
